@@ -153,6 +153,8 @@ class Board:
             )
         elif chip_id == chips.H616:
             board_id = self._armbian_id() or self._allwinner_variants_id()
+        elif chip_id == chips.T527:
+            board_id = self._armbian_id() or self._allwinner_variants_id()
         elif chip_id == chips.A33:
             board_id = self._clockwork_pi_id()
         elif chip_id == chips.RK3308:
@@ -734,6 +736,8 @@ class Board:
             board = boards.WALNUT_PI_1B_EMMC
         elif "walnutpi-1b" in board_value:
             board = boards.WALNUT_PI_1B
+        elif "walnutpi-2b" in board_value:
+            board = boards.WALNUT_PI_2B
             # TODO: Add other specifc board contexts here
 
         elif "lime2" in board_value:
