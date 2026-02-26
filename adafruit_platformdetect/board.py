@@ -217,6 +217,8 @@ class Board:
             board_id = boards.LICHEEPI_4A
         elif chip_id == chips.RV1106:
             board_id = self._rv1106_id()
+        elif chip_id == chips.K230:
+            board_id = self._armbian_id() or self._allwinner_variants_id()
         self._board_id = board_id
         return board_id
 
@@ -738,6 +740,8 @@ class Board:
             board = boards.WALNUT_PI_1B
         elif "walnutpi-2b" in board_value:
             board = boards.WALNUT_PI_2B
+        elif "canmv-k230" in board_value:
+            board = boards.CANMV_K230
             # TODO: Add other specifc board contexts here
 
         elif "lime2" in board_value:
