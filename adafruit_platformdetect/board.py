@@ -742,6 +742,8 @@ class Board:
             board = boards.WALNUT_PI_2B
         elif "canmv-k230" in board_value:
             board = boards.CANMV_K230
+        elif "01studio-xcam" in board_value:
+            board = boards.XCAM
             # TODO: Add other specifc board contexts here
 
         elif "lime2" in board_value:
